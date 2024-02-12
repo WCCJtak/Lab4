@@ -17,7 +17,7 @@ public class HangmanManager {
     private int attemptsLeft;
     private Set<String> words;
     private Set<Character> guessesMade;
-    private String currentPattern = "";
+    private String currentPattern;
 
     private static final char EMPTY_CHAR = '-';
 
@@ -37,6 +37,7 @@ public class HangmanManager {
         this.attemptsLeft = max;
         this.words = new TreeSet<>();
         this.guessesMade = new TreeSet<>();
+        currentPattern = ""; // init
         for (String word : dictionary) {
             if (word.length() == length) {
                 words.add(word);
