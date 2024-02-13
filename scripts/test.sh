@@ -19,6 +19,7 @@ run_test() {
     fi
 }
 
+# seems like I have to write extra testcodes instead inorder to change the dictionary
 for i in {1..3}; do
     run_test $i
 done
