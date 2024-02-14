@@ -36,7 +36,7 @@ public class HangmanMainTest {
                 System.out.println("TestNo " + i + " Passed!\n");
             } else {
                 System.out.println("TestNo " + i + " Failed!\n");
-                System.out.println(output);
+                System.out.println(output + "\n");
             } 
         }
 	}
