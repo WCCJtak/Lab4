@@ -48,6 +48,7 @@ public class HangmanMainTest {
             s += data.nextLine();
             s += "\n";
         }
+        data.close();
         return s;
     }
     
