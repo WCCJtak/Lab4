@@ -110,7 +110,7 @@ public class HangmanManager {
         // Get possible patterns - Patterns  = { pattern : [words] }
         Map<String, Set<String>> patterns = new TreeMap<String, Set<String>>();
         for (String word : words) {
-            String pattern = generatePattern(word, guess);
+            String pattern = generatePattern(word);
             if (!patterns.containsKey(pattern)) {
                 patterns.put(pattern, new TreeSet<>());
             }
@@ -168,10 +168,9 @@ public class HangmanManager {
      * Generates a pattern for a word based on the current guesses.
      *
      * @param word The word to generate a pattern for.
-     * @param guess The latest character guessed.
      * @return A pattern representing the word with guessed letters revealed and others hidden.
      */
-    private String generatePattern(String word, char guess) {
+    private String generatePattern(String word) {
         String pattern = "";
         for (int i = 0; i < word.length(); i++) {
             char letter = word.charAt(i);
